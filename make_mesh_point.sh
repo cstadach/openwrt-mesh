@@ -11,21 +11,21 @@
 # you may customize this
 # ######################
 
-MESH_NAME="my_mesh"
-MESH_PWD="T0psecret"
-MESH_RADIO=radio0
+MESH_NAME="mesh"
+MESH_PWD=""
+MESH_RADIO=radio1
 MESH_CHANNEL=1
 
-WIFI_NAME="my_wifi"
-WIFI_PWD="SuperSecret"
-WIFI_RADIO=radio1
+WIFI_NAME=""
+WIFI_PWD=""
+WIFI_RADIO=radio0
 WIFI_CHANNEL=36
 WIFI_MOBDOMAIN='1234'
 
 # install the wpad mesh package
 
-opkg update
-opkg install --force-overwrite wpad-mesh-openssl
+#opkg update
+#opkg install --force-overwrite wpad-mesh-openssl
 
 # delete the "OpenWrt" radios
 
@@ -64,6 +64,6 @@ uci delete "wireless.$WIFI_RADIO.disabled"
 
 uci commit
 
-wifi down
-/etc/init.d/wpad restart
-wifi up
+# wifi down
+# /etc/init.d/wpad restart
+# wifi up

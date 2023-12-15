@@ -27,7 +27,7 @@ uci delete network.lan.netmask
 
 # change the host name to "WifiAP"
 
-uci set system.@system[0].hostname='WifiAP'
+uci set system.@system[0].hostname='msh1'
 
 
 echo '#####################################################################'
@@ -44,11 +44,3 @@ echo '#####################################################################'
 # commit all changes
 
 uci commit
-
-# remove the firewall config
-
-mv /etc/config/firewall /etc/config/firewall.unused
-
-# reboot the device
-
-reboot
